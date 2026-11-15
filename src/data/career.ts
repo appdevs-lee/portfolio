@@ -1,0 +1,28 @@
+import type { Career } from './schema'
+
+export const career: Career[] = [
+  {
+    period: '2025.01 ~ 2026.09',
+    org: '개발팀',
+    position: '팀장',
+    summary: 'ERP·실시간 관제·임상 eTMF·플랫폼 프로젝트 총괄, 아키텍처 설계 및 백엔드·프론트엔드 개발, 팀 운영',
+  },
+  {
+    period: '2022.12 ~ 2024.12',
+    org: '개발팀',
+    position: '연구원',
+    summary: '메타버스 플랫폼 및 자사 서비스 iOS 앱 개발·운영, 앱스토어 배포 담당',
+  },
+  {
+    period: '2022.01 ~ 2022.12',
+    org: '킹버스 개발팀',
+    position: 'iOS',
+    summary: 'iOS 앱 개발 (전자수첩 앱 신규 개발 및 기관 배포)',
+  },
+  {
+    period: '2021.12 ~ 2022.01',
+    org: '킹버스 개발팀',
+    position: 'Web Frontend',
+    summary: '웹 프론트엔드 개발 (UI 개선 기획, 프로토타입 제작, 화면 퍼블리싱)',
+  },
+]
