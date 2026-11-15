@@ -11,7 +11,7 @@ export function Hero({ profile }: { profile: Profile }) {
       <h1 className="display">
         {headline.lead}
         <br />
-        <em>{headline.accent}</em> {headline.tail}
+        <em>{headline.accent}</em> <span style={{ whiteSpace: 'nowrap' }}>{headline.tail}</span>
         <br />
         <span style={{ color: 'var(--muted)', fontWeight: 600 }}>— {name}.</span>
       </h1>

@@ -50,4 +50,7 @@ aside.nav{ overflow-y: auto; }
   .edu{ grid-template-columns: 1fr; }
   .edu .yr{ border-bottom: 0; padding-bottom: 0; }
   .lede-list li{ font-size: 15px; }
+  .ph-top{ gap: 12px; flex-wrap: wrap; }
+  .shot.diagram{ overflow-x: auto; }
+  .shot.diagram svg{ min-width: var(--dg-min, 0); }
 }

@@ -16,8 +16,7 @@ export function DtgDiagram() {
       <Arrow from={[236, 92]} to={[236, 114]} />
       <Arrow from={[236, 166]} to={[236, 188]} />
       <Arrow from={[304, 214]} to={[490, 214]} />
-      <Arrow from={[304, 130]} to={[490, 72]} label="async" />
-      <Arrow from={[382, 92]} to={[382, 114]} />
+      <Arrow from={[290, 114]} via={[[290, 103], [560, 103]]} to={[560, 92]} />
     </DiagramFrame>
   )
 }
