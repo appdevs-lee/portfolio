@@ -2,10 +2,16 @@ import type { Career } from './schema'
 
 export const career: Career[] = [
   {
-    period: '2025.01 ~ 2026.09',
-    org: '개발팀',
+    period: '2026.03 ~ 2026.09',
+    org: '이너빅스 개발팀',
     position: '팀장',
-    summary: 'ERP·실시간 관제·임상 eTMF·플랫폼 프로젝트 총괄, 아키텍처 설계 및 백엔드·프론트엔드 개발, 팀 운영',
+    summary: '임상시험 eTMF 시스템 구축 프로젝트 총괄(PM) 및 프론트엔드 설계·개발, 발주사 커뮤니케이션',
+  },
+  {
+    period: '2025.01 ~ 2026.09',
+    org: '운수회사 개발팀',
+    position: '팀장',
+    summary: 'ERP·실시간 관제·플랫폼 프로젝트 총괄, 아키텍처 설계 및 백엔드·프론트엔드 개발, 팀 운영',
   },
   {
     period: '2022.12 ~ 2024.12',

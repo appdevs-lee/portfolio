@@ -43,9 +43,9 @@ describe('resume parity (261115)', () => {
     expect(projects.map((p) => p.id)).toEqual(projects.map((p) => `p${p.no}`))
   })
 
-  it('has 7 other projects, 4 career rows, 2 education rows, 7 skill groups', () => {
+  it('has 7 other projects, 5 career rows, 2 education rows, 7 skill groups', () => {
     expect(others).toHaveLength(7)
-    expect(career).toHaveLength(4)
+    expect(career).toHaveLength(5)
     expect(education).toHaveLength(2)
     expect(skills).toHaveLength(7)
   })
@@ -53,6 +53,20 @@ describe('resume parity (261115)', () => {
   it('keeps the project-count stat in sync with the data', () => {
     const stat = profile.stats.find((s) => s.label.includes('프로젝트'))
     expect(stat?.value).toBe(String(projects.length + others.length))
+  })
+})
+
+describe('career', () => {
+  it('lists the transport-company and Innervix teams as separate rows, newest first', () => {
+    expect(career.slice(0, 2).map((c) => [c.org, c.period, c.position])).toEqual([
+      ['이너빅스 개발팀', '2026.03 ~ 2026.09', '팀장'],
+      ['운수회사 개발팀', '2025.01 ~ 2026.09', '팀장'],
+    ])
+  })
+
+  it('attributes eTMF only to the Innervix row', () => {
+    const withEtmf = career.filter((c) => c.summary.includes('eTMF')).map((c) => c.org)
+    expect(withEtmf).toEqual(['이너빅스 개발팀'])
   })
 })
 
