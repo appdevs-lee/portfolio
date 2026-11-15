@@ -1,0 +1,83 @@
+  /* layout */
+  .wrap{
+    display:grid;
+    grid-template-columns: 240px minmax(0,1fr);
+    max-width: 1280px;
+    margin: 0 auto;
+    min-height: 100vh;
+  }
+  aside.nav{
+    position: sticky; top:0; align-self:start;
+    height: 100vh;
+    padding: 36px 26px 28px;
+    border-right: 1px solid var(--line);
+    background: var(--bg);
+    display:flex; flex-direction: column;
+    gap: 22px;
+  }
+  aside .brand{ display:flex; align-items:center; gap:12px; }
+  aside .brand .logo{
+    width: 32px; height: 32px; border-radius: 6px;
+    background: var(--ink); color:var(--bg);
+    display:grid; place-items:center;
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 14px; font-weight: 700; letter-spacing: -.02em;
+  }
+  aside .brand .who{ font-weight: 700; font-size: 15.5px; letter-spacing: -.02em; line-height:1.25; }
+  aside .brand .role{ font-size: 11.5px; color: var(--muted); margin-top:1px; font-family:var(--font-mono), ui-monospace, monospace; letter-spacing:.04em; }
+
+  aside .label{
+    font-family:var(--font-mono), ui-monospace, monospace;
+    font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--muted-2);
+    margin-bottom: 8px;
+  }
+  aside nav ol{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:1px; }
+  aside nav a{
+    display:grid; grid-template-columns: 28px 1fr auto; align-items:center;
+    padding: 7px 8px; border-radius: 6px;
+    font-size: 13px; color: var(--ink-2);
+    transition: background .15s ease, color .15s ease;
+  }
+  aside nav a:hover{ background: var(--bg-2); color: var(--accent-ink); }
+  aside nav a.active{ background: var(--bg-2); color: var(--accent-ink); }
+  aside nav a.active .num{ color: var(--accent); }
+  aside nav a .num{
+    font-family:var(--font-mono), ui-monospace, monospace;
+    font-size: 11px; color: var(--muted-2);
+  }
+  aside nav a .yr{
+    font-family:var(--font-mono), ui-monospace, monospace;
+    font-size: 10.5px; color: var(--muted-2);
+  }
+  aside .meta{
+    margin-top:auto; padding-top:18px; border-top: 1px solid var(--line);
+    font-family:var(--font-mono), ui-monospace, monospace;
+    font-size: 10.5px; color: var(--muted); letter-spacing: .08em; text-transform: uppercase;
+    line-height: 1.7;
+  }
+  aside .meta .v{ color: var(--ink-2); }
+  aside .meta a{ color: var(--accent-ink); display:inline-block; margin-top:4px; text-transform:none; letter-spacing:.04em; }
+
+  main{
+    padding: 56px 64px 96px;
+    max-width: 980px;
+    width: 100%;
+  }
+
+  /* legacy topbar (kept hidden but harmless) */
+  .topbar{ display: none; }
+  footer.foot{
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    display: flex; justify-content: space-between;
+    font-family:var(--font-mono), ui-monospace, monospace;
+    font-size: 11px; color: var(--muted-2); letter-spacing:.06em;
+  }
+
+  /* scroll progress */
+  .progress{
+    position: fixed; top:0; left:0; right:0; height: 2px; background: transparent; z-index: 50;
+  }
+  .progress .bar{ height: 100%; background: var(--accent); width: 0%; transition: width .1s linear; }
