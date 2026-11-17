@@ -40,7 +40,7 @@ export const others: OtherProject[] = [
   {
     period: '2021.03 ~ 2021.07',
     title: '전자수첩 iOS 앱',
-    role: 'iOS',
+    role: 'iOS · Freelance',
     description: '전자수첩 iOS 앱 전체 개발 — 서울대·서강대·부산중앙고·대한민국 명장회 배포.',
   },
 ]

@@ -6,7 +6,7 @@ const splitPeriod = (period: string) => period.split(' ~ ')
 export function CareerTimeline({ rows }: { rows: readonly Career[] }) {
   return (
     <section id="career" style={{ marginTop: 72 }}>
-      <SectionHead title="Career" tag="// 02 ─ 2021 → 2026" />
+      <SectionHead title="Career" tag="// 02 ─ 2020 → 2026" />
       <div className="timeline">
         {rows.map((row) => {
           const [from, to] = splitPeriod(row.period)

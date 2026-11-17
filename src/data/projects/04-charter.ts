@@ -6,7 +6,7 @@ export const charter: Project = {
   navLabel: '전세버스 대절 앱',
   title: '킹버스 전세버스 대절 앱',
   tagline: '전세버스 대절을 중개하는 승객·기사용 모바일 서비스를 0에서부터 구축',
-  period: '2026.06 ~ 재직 중',
+  period: '2026.06 ~ 2026.09',
   role: '프로젝트 총괄 · 인프라',
   pill: 'Lead · Infra',
   stack: ['Django', 'DRF', 'PostgreSQL', 'Docker', 'GCP', 'Figma'],

@@ -9,6 +9,7 @@ export const webUi: Project = {
   period: '2020.12 ~ 2022.01',
   role: '웹 프론트엔드',
   pill: 'Frontend',
+  context: '프리랜서로 시작 → 입사 후 지속',
   stack: ['HTML5', 'CSS3', 'JavaScript'],
   highlights: [
     {

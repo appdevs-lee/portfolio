@@ -43,9 +43,9 @@ describe('resume parity (261115)', () => {
     expect(projects.map((p) => p.id)).toEqual(projects.map((p) => `p${p.no}`))
   })
 
-  it('has 7 other projects, 5 career rows, 2 education rows, 7 skill groups', () => {
+  it('has 7 other projects, 6 career rows, 2 education rows, 7 skill groups', () => {
     expect(others).toHaveLength(7)
-    expect(career).toHaveLength(5)
+    expect(career).toHaveLength(6)
     expect(education).toHaveLength(2)
     expect(skills).toHaveLength(7)
   })
@@ -67,6 +67,23 @@ describe('career', () => {
   it('attributes eTMF only to the Innervix row', () => {
     const withEtmf = career.filter((c) => c.summary.includes('eTMF')).map((c) => c.org)
     expect(withEtmf).toEqual(['이너빅스 개발팀'])
+  })
+})
+
+describe('employment facts', () => {
+  it('lists pre-Kingbus freelance work as the oldest career row', () => {
+    const last = career[career.length - 1]
+    expect([last.org, last.period]).toEqual(['프리랜서', '2020.12 ~ 2021.11'])
+  })
+
+  it('shows nothing as currently employed (all roles ended 2026.09)', () => {
+    expect(JSON.stringify({ projects, career, others })).not.toContain('재직 중')
+  })
+
+  it('marks main projects that started before joining Kingbus (2021.12) as freelance', () => {
+    projects
+      .filter((p) => p.period.slice(0, 7) < '2021.12')
+      .forEach((p) => expect(p.context ?? '', p.id).toContain('프리랜서'))
   })
 })
 

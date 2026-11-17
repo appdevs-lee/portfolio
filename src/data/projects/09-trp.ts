@@ -9,6 +9,7 @@ export const trp: Project = {
   period: '2021.01 ~ 2022.10',
   role: '웹 프론트엔드 · 백엔드',
   pill: 'Full-stack',
+  context: '프리랜서로 시작 → 입사 후 지속',
   stack: ['Django', 'Python', 'MariaDB', 'HTML5', 'CSS3', 'JavaScript', 'TailwindCSS'],
   visual: {
     items: [
