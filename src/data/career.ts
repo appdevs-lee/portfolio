@@ -31,4 +31,10 @@ export const career: Career[] = [
     position: 'Web Frontend',
     summary: '웹 프론트엔드 개발 (UI 개선 기획, 프로토타입 제작, 화면 퍼블리싱)',
   },
+  {
+    period: '2020.12 ~ 2021.11',
+    org: '프리랜서',
+    position: 'Freelance',
+    summary: '웹 프론트엔드·풀스택·iOS 외주 — 웹 서비스 UI 개선, TRP 배차 시스템 초기 구축, 전자수첩 iOS 앱 개발',
+  },
 ]
